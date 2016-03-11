@@ -1,0 +1,376 @@
+download.file(url = "http://bit.ly/dasi_project_template", destfile = "dasi_project_template.Rmd")
+source("http://www.openintro.org/stat/data/present.R")
+present
+dim(present)
+str(present)
+names(present)
+View(present)
+present$boys
+plot(x = present$year, y = present$girls)
+plot(x = present$year, y = present$girls, type = "l")
+?plot
+present$boys + present$girls
+plot(year, boys + girls, data=present, type = "l")
+plot(present$year, present$boys + present$girls, type = "l")
+sum <- present$boys + present$girls
+max(sum)
+which.max(sum)
+present$year
+present$boys / present$girls
+present$boys / (present$boys + present$girls)
+present$girls / (present$boys + present$girls)
+plot(present$year, present$boys / (present$boys + present$girls), type = "l")
+present$boys > present$girls
+g <- present$girls / (present$boys + present$girls)
+b <- present$boys / (present$boys + present$girls)
+b/g
+plot(present$year, b/g, type = "l")
+abs(present$boys - present$girls)
+val <- abs(present$boys - present$girls)
+which.max(val)
+present$year
+source("http://www.openintro.org/stat/data/cdc.R")
+names(cdc)
+str(cdc)
+head(cdc)
+tail(cdc)
+summary(cdc$weight)
+mean(cdc$weight)
+var(cdc$weight)
+table(cdc$smoke100)
+table(cdc$smoke100)/20000
+barplot(table(cdc$smoke100))
+summary(cdc$gender)
+summary(cdc$genhlth)
+4657/20000
+gender_smokers = table(cdc$gender,cdc$smoke100)
+gender_smokers
+mosaicplot(gender_smokers)
+dim(cdc)
+cdc[567,6]
+cdc[567,]
+cdc[1:10,6]
+names(cdc)
+cdc[1:10,]
+mdata = subset(cdc, cdc$gender == "m")
+m_and_over30 = subset(cdc, cdc$gender == "m" & cdc$age > 30)
+m_or_over30 = subset(cdc, cdc$gender == "m" | cdc$age > 30)
+under23_and_smoke <- subset(cdc, cdc$age <23 & cdc$smoke100 == "1")
+under23_and_smoke
+dim(under23_and_smoke)
+boxplot(cdc$height)
+summary(cdc$height)
+boxplot(cdc$height ~ cdc$gender)
+(147/(65^2))*703
+(140/(65^2))*703
+bmi = (cdc$weight / cdc$height^2) * 703
+boxplot(bmi ~ cdc$genhlth)
+names(cdc)
+boxplot(bmi ~ cdc$exerany)
+hist(cdc$age)
+hist(bmi)
+hist(bmi, breaks = 50)
+hist(bmi)
+hist(bmi, breaks = 50)
+plot(cdc$weight, cdc$wtdesire)
+Place <- c(N, S, E, W)
+Place <- c(n, s, e, w)
+Place <- c(s, e, w)
+Place <- c("N", "S", "E", "W")
+sample(Place)
+place <- c("n", "s", "e", "w")
+choose(place)
+?choose
+choose(1, place)
+sample(place, size=1, replace = TRUE)
+sample(place, size=1, replace = TRUE)
+sample(place, size=1, replace = TRUE)
+sample(place, size=1, replace = TRUE)
+sample(place, size=10, replace = TRUE)
+sample(place, size=10, replace = FALSE)
+sample(place, size=10, replace = TRUE)
+ten = sample(place, size=10, replace = TRUE)
+?count
+?count.fields
+if(ten == "N")
+)
+summary(ten)
+count.fields(ten, "N")
+table(ten)
+ten
+library("swirl")
+rm(list=ls()))
+rm(list=ls())
+swirl()
+patients <- c("Bill", "Gina", "Kelly", "Sean")
+cbind(patients, my_matrix)
+my_data <- data.frame(patients, my_matrix)
+my_data
+class(my_data)
+cnames <- c("patient", "age", "weight", "bp", "rating", "test")
+colnames(cnames)
+colnames(my_data) <-cnames
+my_data
+TRUE == TRUE
+(F == T) == F
+(FALSE==TRUE)==FALSE
+6 == 7
+6 < 7
+10 <= 10
+5!=7
+5 != 7
+5 !== 7
+5 != 7
+info()
+5 == !7
+!5 == 7
+FALSE & FALSE
+TRUE & c(TRUE, FALSE, FALSE)
+TRUE && c(TRUE, FALSE, FALSE)
+TRUE | c(TRUE, FALSE, FALSE)
+TRUE || c(TRUE, FALSE, FALSE)
+bye()
+setwd("C:/Users/echasen/Desktop/SPLAT-Annie's work/2014 data") # you need to change this to the directory you store you files for this project
+getwd
+getwd()
+setwd("C:/Users/echasen/Google Drive)
+)
+)
+?
+""
+...
+stop
+library(nlme)
+data("Rail")
+plot(Rail)
+trellis.par.set(theme = col.whitebg())
+?trellis.par.set
+library(lattice)
+trellis.par.set(theme = col.whitebg())
+plot(Rail)
+lme(travel~1, data = Rail, random = ~1 | Rail)
+anova(lme(travel~1, data = Rail, random = ~1 | Rail))
+rl <- lme(travel~1, data = Rail, random = ~1 | Rail)
+plot(rl)
+plot(rl, resid(.)~fitted(.)|Rail)
+lme(travel~1, data = Rail, random = ~1 | Rail, method = "ML")
+library(swirl)
+swirl()
+dist(dataFrame)
+hc <- hclust(distxy)
+plot(hc)
+as.dendrogram(hc)
+plot(as.dendrogram(hc))
+abline(h = 1.5, col = "blue")
+abline(h = 0.4, col = "red")
+5
+12
+abline( h = 0.05, col = "green")
+dist(dFsm)
+hc
+heatmap(dataMatrix, col  = cm.colors(25))
+heatmap(mt)
+mt
+plot(denmt
+)
+distmt
+library(cowplot)
+install.packages("cowplot")
+library(cowplot)
+library(ggplot2)
+remove.packages("cowplot")
+library(ggplot2)
+install.packages("ggplot2")
+install.packages("cowplot")
+library(cowplot)
+setwd("C:/Users/echasen/Google Drive/coursera/reproducible research/project 1")
+unzip("activity.zip")
+act <- read.csv("activity.csv")
+library(dplyr)
+steps_per_day <- act %>%
+group_by(date) %>%
+summarize(total_steps = sum(steps, na.rm = TRUE),
+mean_steps = mean(steps, na.rm = TRUE),
+med_steps = median(steps, na.rm = TRUE)
+)
+mn_int <- tapply(act$steps, act$interval, mean, na.rm = TRUE)
+act$step.narm <- replace(act$steps, is.na(act$steps), mn_int)
+steps_per_day_narm <- act %>%
+group_by(date) %>%
+summarize(total_steps = sum(step.narm),
+mean_steps = mean(step.narm),
+med_steps = median(step.narm)
+)
+p1 <- ggplot(steps_per_day, aes(as.numeric(date), mean_steps)) +
+geom_line()
+p2 <- ggplot(steps_per_day_narm, aes(as.numeric(date), mean_steps)) +
+geom_line()
+p3 <- ggplot(steps_per_day, aes(as.numeric(date), med_steps)) +
+geom_line()
+p4 <- ggplot(steps_per_day_narm, aes(as.numeric(date), med_steps)) +
+geom_line()
+plot_grid(p1, p2, p3, p4, ncol = 2)
+plot_grid(p1, p2)
+plot_grid(p1, p2, p3, p4, ncol = 2)
+p1 <- ggplot(steps_per_day, aes(as.numeric(date), mean_steps)) +
+geom_line() +
+labs(xlab = "Day", ylab = "Mean number of steps", ggtitle = "Avg steps per day (including NAs)")
+p1
+p1 <- ggplot(steps_per_day, aes(as.numeric(date), mean_steps)) +
+geom_line() +
+labs(x = "Day", y = "Mean number of steps", ggtitle = "Avg steps per day (including NAs)")
+p1
+p1 <- ggplot(steps_per_day, aes(as.numeric(date), mean_steps)) +
+geom_line() +
+labs(x = "Day", y = "Mean number of steps", title = "Avg steps per day (including NAs)")
+p1
+p2 <- ggplot(steps_per_day_narm, aes(as.numeric(date), mean_steps)) +
+geom_line() +
+labs(x = "Day", y = "Mean number of steps", title = "Avg steps per day (NAs imputed)")
+p2
+p3 <- ggplot(steps_per_day, aes(as.numeric(date), med_steps)) +
+geom_line() +
+labs(x = "Day", y = "Median number of steps", title = "Avg steps per day (including NAs)")
+p3
+p3 <- ggplot(steps_per_day, aes(as.numeric(date), med_steps)) +
+geom_line() +
+labs(x = "Day", y = "Median number of steps", title = "Median steps per day (including NAs)")
+p3
+p1 <- ggplot(steps_per_day, aes(as.numeric(date), mean_steps)) +
+geom_line() +
+labs(x = "Day", y = "Mean number of steps", title = "Avg steps per day (including NAs)")
+p2 <- ggplot(steps_per_day_narm, aes(as.numeric(date), mean_steps)) +
+geom_line() +
+labs(x = "Day", y = "Mean number of steps", title = "Avg steps per day (NAs imputed)")
+p3 <- ggplot(steps_per_day, aes(as.numeric(date), med_steps)) +
+geom_line() +
+labs(x = "Day", y = "Median number of steps", title = "Median steps per day (including NAs)")
+p4 <- ggplot(steps_per_day_narm, aes(as.numeric(date), med_steps)) +
+geom_line() +
+labs(x = "Day", y = "Median number of steps", title = "Median steps per day (NAs imputed)")
+plot_grid(p1, p2, p3, p4, ncol = 2)
+summary(steps_per_day$mean_steps)
+summary(steps_per_day_narm$mean_steps)
+summary(steps_per_day$med_steps)
+summary(steps_per_day_narm$med_steps)
+?weekdays
+str(act)
+act$date <- as.Date(act$date)
+str(act)
+p2 <- ggplot(steps_per_day_narm, aes(date, mean_steps)) +
+geom_line() +
+labs(x = "Day", y = "Mean number of steps", title = "Avg steps per day (NAs imputed)")
+p2
+head(weekdays(act$date))
+act$day <- weekdays(act$date)
+head(act)
+Monday:Friday
+d <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+d
+act$day = d
+act$day == d
+head(act$day == d)
+head(act$day)
+act$wkday <- if(act$day == "Saturday|Sunday") "weekend" else "weekday"
+head(act)
+tail(act)
+act[60:70,]
+act[50:60,]
+act[500:510,]
+act[1500:1510,]
+act$wkday <- if(act$day == "Saturday||Sunday") "weekend" else "weekday"
+act$wkday <- if(act$day == "Saturday)|(act$dat ==Sunday") "weekend" else "weekday"
+act$wkday <- if(act$day == "Saturday)||(act$dat ==Sunday") "weekend" else "weekday"
+act[1500:1510,]
+act[1600:1610,]
+act[1700:1710,]
+act[1800:1810,]
+act$wkday <- if(act$day == "Saturday) {"weekend"} else {"weekday"}
+act$wkday <- if(act$day == "Saturday) {weekend} else {weekday}
+)
+}
+))
+.
+jhg
+<
+======
+stop
+stop()
+install.packages("timeDate")
+library(timeDate)
+?isWeekday
+head(isWeekday(act$date))
+head(isWeekend(act$date))
+act$wkday <- if(isWeekday(act$date) == TRUE) "weekday" else "weekend"
+act$wkday <- if(isWeekday(act$date) == FALSE) "weekend"
+head(act)
+weekdays(0:7)
+wkends <- act %>%
+filter(day == "Sunday"|"Saturday")
+wkends <- act %>%
+filter(day == "Sunday"| day == "Saturday")
+head(wkends)
+wkends <- act %>%
+filter(day == "Sunday"| day == "Saturday") %>%
+mutate(wkday = "weekend")
+head(wkends)
+wkdys <- act %>%
+filter(day == "Monday"| day == "Tuesday" | day == "Wednesday" |
+day == "Thursday" | day == "Friday") %>%
+mutate(wkday = "weekday")
+head(wkdys)
+all_dat <- bind_rows(wkends, wkdys) %>%
+arrange(date)
+head(all_dat)
+mn_int <- tapply(act$steps, act$interval, mean, na.rm = TRUE)
+act$step.narm <- replace(act$steps, is.na(act$steps), mn_int)
+act$date <- as.Date(act$date)  # convert date variable to data format
+act$day <- weekdays(act$date)
+wkends <- act %>%
+filter(day == "Sunday"| day == "Saturday") %>%
+mutate(wkday = "weekend")
+wkdys <- act %>%
+filter(day == "Monday"| day == "Tuesday" | day == "Wednesday" |
+day == "Thursday" | day == "Friday") %>%
+mutate(wkday = "weekday")
+all_dat <- bind_rows(wkends, wkdys) %>%
+arrange(date)
+head(all_dat
+)
+with(by_interval, plot(interval, mn_stp, type = "l",
+ylab = "Average number of steps",
+xlab = "Interval of day",
+main = "Average no. of steps across all days by 5-minute interval"))
+by_interval <- act %>%
+group_by(interval) %>%
+summarise(mn_stp = mean(steps, na.rm = TRUE))
+with(by_interval, plot(interval, mn_stp, type = "l",
+ylab = "Average number of steps",
+xlab = "Interval of day",
+main = "Average no. of steps across all days by 5-minute interval"))
+by_int_wkdy <- wkdys %>%
+group_by(interval) %>%
+summarise(mn_stp = mean(steps.narm))
+by_int_wkdy <- wkdys %>%
+group_by(interval) %>%
+summarise(mn_stp = mean(step.narm))
+by_int_wkend <- wkends %>%
+group_by(interval) %>%
+summarise(mn_stp = mean(step.narm))
+with(by_int_wkdy, plot(interval, mn_stp, type = "l",
+ylab = "Average number of steps",
+xlab = "Interval of day",
+main = "Average no. of steps across weekdays by 5-minute interval"))
+with(by_int_wkend, plot(interval, mn_stp, type = "l",
+ylab = "Average number of steps",
+xlab = "Interval of day",
+main = "Average no. of steps across weekend by 5-minute interval"))
+par(mfrow = c(2, 1))
+with(by_int_wkdy, plot(interval, mn_stp, type = "l",
+ylab = "Average number of steps",
+xlab = "Interval of day",
+main = "Average no. of steps across weekdays by 5-minute interval"))
+with(by_int_wkend, plot(interval, mn_stp, type = "l",
+ylab = "Average number of steps",
+xlab = "Interval of day",
+main = "Average no. of steps across weekend by 5-minute interval"))
